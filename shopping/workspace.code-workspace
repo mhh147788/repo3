@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "shopping",
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.tokenColorCustomizations": {
+			"comments": {
+				"fontStyle": "",
+				"foreground": "#867171"
+			}
+		},
+		"liveServer.settings.multiRootWorkspaceName": "shopping"
+	}
+}

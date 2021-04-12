@@ -1,0 +1,370 @@
+/* 公共样式 
+    首页 列表页 详情页等
+    版心
+*/
+
+/* 声明字体图标 这里一定要注意路径的变化
+ */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?m3ue9b');
+    src: url('fonts/icomoon.eot?m3ue9b#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?m3ue9b') format('truetype'), url('fonts/icomoon.woff?m3ue9b') format('woff'), url('fonts/icomoon.svg?m3ue9b#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+/* 版心 */
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.style_red {
+    color: #c81623;
+}
+
+/* 快捷导航模块 */
+
+.shortcut {
+    height: 31px;
+    /* 儿子会继承 */
+    line-height: 31px;
+    background-color: #f1f1f1;
+}
+
+.fl ul li a:nth-child(1) {
+    margin: 0px 13px 0px 13px;
+}
+
+.fl ul li a:first-child {
+    color: black;
+}
+
+.shortcut ul li {
+    float: left;
+}
+
+/* 偶数的li */
+
+.shortcut .fr ul li:nth-child(even) {
+    width: 1px;
+    height: 12px;
+    background-color: #666666;
+    margin: 9px 15px 0px;
+}
+
+/* ":after" 伪元素可以在元素的内容之后插入新内容。 */
+
+.arrow-icon::after {
+    /* 插入小三角 此处用的是字符图标 */
+    content: '\e91e';
+    font-family: 'icomoon';
+    margin-left: 6px;
+}
+
+/* header头部制作 */
+
+.header {
+    position: relative;
+    height: 105px;
+}
+
+/* logo制作start */
+
+.logo {
+    position: absolute;
+    top: 25px;
+    width: 171px;
+    height: 61px;
+}
+
+.logo a {
+    /* 转为块级元素 */
+    display: block;
+    width: 171px;
+    height: 61px;
+    /* 为a设置背景图片 */
+    background: url(../images/logo.png) no-repeat;
+    /* 京东的做法 */
+    /* font-size: 0px; */
+    /* 淘宝做法 */
+    text-indent: -9999px;
+    /* 隐藏溢出部分 */
+    overflow: hidden;
+}
+
+/* logo制作end */
+
+.search {
+    position: absolute;
+    left: 364px;
+    top: 25px;
+    width: 538px;
+    height: 36px;
+    border: 2px solid #b1191a;
+}
+
+.search input {
+    float: left;
+    width: 454px;
+    height: 32px;
+    /* 为了让placeholder="语言开发"获得10px的间距 */
+    padding-left: 10px;
+}
+
+.search button {
+    float: left;
+    width: 80px;
+    height: 32px;
+    background-color: #b1191a;
+    font-size: 16px;
+    color: #fff;
+}
+
+.hotwords {
+    position: absolute;
+    top: 66px;
+    left: 346px;
+}
+
+.hotwords a {
+    margin: 0 10px;
+}
+
+.shopcar {
+    position: absolute;
+    right: 60px;
+    top: 25px;
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #dfdfdf;
+    background-color: #f7f7f7;
+}
+
+.shopcar::before {
+    content: '\e93a';
+    font-family: 'icomoon';
+    margin-right: 5px;
+    color: #b1191a;
+}
+
+.shopcar::after {
+    content: '\e920';
+    font-family: 'icomoon';
+    margin-left: 10px;
+}
+
+.count {
+    position: absolute;
+    top: -5px;
+    left: 105px;
+    height: 14px;
+    /* 它继承了前面的父级元素的行高，这里需要重新定义 */
+    line-height: 14px;
+    color: #fff;
+    background-color: #e60012;
+    padding: 0 5px;
+    border-radius: 7px 7px 7px 0;
+}
+
+/* nav模块制作 */
+
+.nav {
+    height: 47px;
+    border-bottom: 2px solid #b1101a;
+}
+
+.nav .dropdown {
+    float: left;
+    height: 45px;
+    width: 210px;
+    background-color: #b1191a;
+}
+
+.nav .navitems {
+    float: left;
+}
+
+.dropdown .dt {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+}
+
+.dropdown .dd {
+    display: none;
+    width: 210px;
+    height: 465px;
+    background-color: #c81623;
+    margin-top: 2px;
+}
+
+.dropdown .dd ul li {
+    position: relative;
+    height: 31px;
+    line-height: 31px;
+    margin-left: 2px;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.dropdown .dd ul :hover {
+    background-color: #fff;
+}
+
+.dropdown .dd ul li ::after {
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    font-family: 'icomoon';
+    content: '\e920';
+    font-size: 14px;
+}
+
+.dropdown .dd ul li a {
+    font-size: 14px;
+    color: #fff;
+}
+
+.dropdown .dd ul :hover a {
+    color: #c81623;
+}
+
+/* myself */
+
+/* .navitems ul li a {
+    float: left;
+    display: inline-block;
+    text-align: center;
+    line-height: 45px;
+    color: #b3b3b3;
+    font-size: 16px;
+    margin-right: 52px;
+}
+
+li a:first-child {
+    margin-right: 38px;
+} */
+
+.navitems ul li {
+    float: left;
+}
+
+.navitems ul li a {
+    display: block;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+    padding: 0 26px;
+    color: #333333;
+}
+
+.navitems ul li :hover {
+    color: #c81623;
+}
+
+/* 自己强迫症加的 */
+
+.navitems ul li:first-child {
+    padding: 0px 0px 0px 12px;
+}
+
+.footer {
+    height: 415px;
+    background-color: #f5f5f5;
+    padding-top: 30px;
+}
+
+.mod_service {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+
+.mod_service ul li {
+    float: left;
+    width: 240px;
+    height: 50px;
+    /* background-color: pink; */
+    padding-left: 35px;
+}
+
+.mod_service ul li h5 {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url(../images/icons.png) no-repeat -252px -2px;
+    margin-right: 8px;
+}
+
+.mod_service ul li .service_text h4 {
+    font-size: 14px;
+    margin: 8px 0px;
+}
+
+.mod_service ul li .service_text p {
+    font-size: 12px;
+}
+
+.mod_service ul li .photo2 {
+    background: url(../images/icons.png) no-repeat -254px -53px;
+}
+
+.mod_service ul li .photo3 {
+    background: url(../images/icons.png) no-repeat -257px -105px;
+}
+
+.mod_service ul li .photo4 {
+    background: url(../images/icons.png) no-repeat -257px -157px;
+}
+
+.mod_service ul li .photo5 {
+    background: url(../images/icons.png) no-repeat -257px -208px;
+}
+
+.mod_help {
+    position: relative;
+    height: 190px;
+    border-bottom: 1px solid #ccc;
+}
+
+.mod_help dl {
+    float: left;
+    width: 147px;
+    margin-left: 52px;
+}
+
+.mod_help dl dt {
+    font: normal 500 16px 'Microsoft Yahei';
+    padding-top: 21px;
+}
+
+.mod_help dl dd {
+    font: normal 500 12px '宋体';
+    padding-top: 8px;
+}
+
+.mod_help dl .QRCode {
+    background: url(../images/QRCode.png);
+}
+.QRCode {
+    position: absolute;
+    right: 65px;
+    text-align: center;
+}

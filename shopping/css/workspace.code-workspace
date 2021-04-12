@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "shopping",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"editor.tokenColorCustomizations": {
+			"comments": {
+				"fontStyle": "",
+				"foreground": "#867171"
+			}
+		}
+	}
+}
